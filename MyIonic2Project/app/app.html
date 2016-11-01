@@ -1,0 +1,25 @@
+<!-- Sets up an ion-menu to function as a side menu -->
+<!-- then an ion-nav component to act as main content area. -->
+
+<!-- [content] property is bound to the local variable 'content' -->
+<!-- from our ion-nav so it knows where it should navigate around. -->
+<ion-menu [content]="content">
+
+  <ion-toolbar>
+    <ion-title>Pages</ion-title>
+  </ion-toolbar>
+
+  <ion-content>
+    <ion-list>
+      <button ion-item *ngFor="let p of pages" (click)="openPage(p)">
+        {{p.title}}
+      </button>
+    </ion-list>
+  </ion-content>
+
+</ion-menu>
+
+<!-- The [root] property binding set the first, "root", page for the ion-nav -->
+<!-- component. When ion-nav loads, the compponent referenced by the variable -->
+<!-- rootPage will be the root page. -->
+<ion-nav [root]="rootPage" #content swipe-back-enabled="false"></ion-nav>

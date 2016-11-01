@@ -1,0 +1,17 @@
+<ion-navbar primary *navbar>
+  <ion-title>
+    Home
+  </ion-title>
+ 
+  <ion-buttons end>
+    <button (click)="addData()"><ion-icon name="add"></ion-icon></button>  
+  </ion-buttons>
+</ion-navbar>
+ 
+<ion-content class="home">
+  <ion-list>
+    <ion-item *ngFor="#item of items">
+      {{item.message}}
+    </ion-item>
+  </ion-list>
+</ion-content>
