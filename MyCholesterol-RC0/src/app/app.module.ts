@@ -6,7 +6,7 @@ import { ChartjsPage } from '../pages/chartjs/chartjs';
 import { EchartsPage } from '../pages/echarts/echarts';
 import { HighchartsPage } from '../pages/highcharts/highcharts';
 import { C3Page } from '../pages/c-3/c-3';
-import { ChartComponent, Chart } from 'ng2-chartjs2';
+//import { ChartComponent, Chart } from 'ng2-chartjs2';
 import { NavController } from 'ionic-angular';
 
 @NgModule({
@@ -16,8 +16,7 @@ import { NavController } from 'ionic-angular';
     ChartjsPage,
     EchartsPage,
     HighchartsPage,
-    C3Page,
-    ChartComponent, Chart
+    C3Page
   ],
   imports: [
     IonicModule.forRoot(MyApp)
@@ -29,8 +28,7 @@ import { NavController } from 'ionic-angular';
     ChartjsPage,
     EchartsPage,
     HighchartsPage,
-    C3Page,
-    ChartComponent, Chart
+    C3Page
   ],
   providers: []
 })
