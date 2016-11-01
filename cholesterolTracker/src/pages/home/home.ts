@@ -3,6 +3,7 @@ import { Component } from '@angular/core';
 import { NavController } from 'ionic-angular';
 import { AuthData } from '../../providers/auth-data';
 import { LoginPage } from '../login/login';
+import { ChartsPage } from '../charts/charts'
 
 @Component({
   selector: 'page-home',
@@ -20,4 +21,9 @@ export class HomePage {
     });
   }
 
+showCharts() {
+      this.navCtrl.push(ChartsPage);
+    };
+  
 }
+

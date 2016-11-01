@@ -4,6 +4,7 @@ import { MyApp } from './app.component';
 
 // Import pages
 import { HomePage } from '../pages/home/home';
+import { ChartsPage } from '../pages/charts/charts';
 import { EventCreatePage } from '../pages/event-create/event-create';
 import { EventDetailPage } from '../pages/event-detail/event-detail';
 import { EventListPage } from '../pages/event-list/event-list';
@@ -28,7 +29,8 @@ import { ProfileData } from '../providers/profile-data';
     LoginPage,
     ProfilePage,
     ResetPasswordPage,
-    SignupPage
+    SignupPage,
+    ChartsPage
   ],
   imports: [
     IonicModule.forRoot(MyApp)
@@ -43,7 +45,8 @@ import { ProfileData } from '../providers/profile-data';
     LoginPage,
     ProfilePage,
     ResetPasswordPage,
-    SignupPage
+    SignupPage,
+    ChartsPage
   ],
   providers: [
     AuthData,
