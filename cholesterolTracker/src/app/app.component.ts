@@ -16,14 +16,15 @@ export class MyApp {
 
    constructor(platform: Platform) {
 
-    const config = {
-      apiKey: "AIzaSyALKfevapBOYK202f6k5mPPfMrT1MHDv5A",
-      authDomain: "bill-tracker-e5746.firebaseapp.com",
-      databaseURL: "https://bill-tracker-e5746.firebaseio.com",
-      storageBucket: "bill-tracker-e5746.appspot.com",
-      messagingSenderId: "508248799540"
-    };
-    firebase.initializeApp(config);
+  // Initialize Firebase
+  const config = {
+    apiKey: "AIzaSyANUUBVCjygmfVi8faEDCdOybM1nlmZtqc",
+    authDomain: "my-cholesterol.firebaseapp.com",
+    databaseURL: "https://my-cholesterol.firebaseio.com",
+    storageBucket: "my-cholesterol.appspot.com",
+    messagingSenderId: "1059460223972"
+  };
+  firebase.initializeApp(config);
 
     firebase.auth().onAuthStateChanged( user => {
       if (!user) {
