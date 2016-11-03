@@ -4,6 +4,8 @@ import { NavController } from 'ionic-angular';
 import { AuthData } from '../../providers/auth-data';
 import { LoginPage } from '../login/login';
 import { ChartsPage } from '../charts/charts'
+import { BloodtestCreatePage } from '../bloodtest-create/bloodtest-create'
+import { BloodtestListPage } from '../bloodtest-list/bloodtest-list'
 
 @Component({
   selector: 'page-home',
@@ -21,9 +23,17 @@ export class HomePage {
     });
   }
 
-showCharts() {
+  showCharts() {
       this.navCtrl.push(ChartsPage);
-    };
+  }
+
+  goToCreate() {
+    this.navCtrl.push(BloodtestCreatePage);
+  }
+
+  goToList() {
+    this.navCtrl.push(BloodtestListPage);  
+  }
   
 }
 

@@ -12,12 +12,16 @@ import { LoginPage } from '../pages/login/login';
 import { ProfilePage } from '../pages/profile/profile';
 import { ResetPasswordPage } from '../pages/reset-password/reset-password';
 import { SignupPage } from '../pages/signup/signup';
+import { BloodtestListPage } from '../pages/bloodtest-list/bloodtest-list';
+import { BloodtestCreatePage } from '../pages/bloodtest-create/bloodtest-create';
+import { BloodtestDetailPage } from '../pages/bloodtest-detail/bloodtest-detail';
+
 
 // Import providers
+import { BloodtestData } from '../providers/bloodtest-data';
 import { AuthData } from '../providers/auth-data';
 import { EventData } from '../providers/event-data';
 import { ProfileData } from '../providers/profile-data';
-
 
 @NgModule({
   declarations: [
@@ -30,7 +34,10 @@ import { ProfileData } from '../providers/profile-data';
     ProfilePage,
     ResetPasswordPage,
     SignupPage,
-    ChartsPage
+    ChartsPage,
+    BloodtestCreatePage,
+    BloodtestListPage,
+    BloodtestDetailPage
   ],
   imports: [
     IonicModule.forRoot(MyApp)
@@ -46,12 +53,16 @@ import { ProfileData } from '../providers/profile-data';
     ProfilePage,
     ResetPasswordPage,
     SignupPage,
-    ChartsPage
+    ChartsPage,
+    BloodtestCreatePage,
+    BloodtestListPage,
+    BloodtestDetailPage
   ],
   providers: [
     AuthData,
     EventData,
-    ProfileData
+    ProfileData,
+    BloodtestData
   ]
 })
 export class AppModule {}
