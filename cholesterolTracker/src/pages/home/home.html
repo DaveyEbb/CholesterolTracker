@@ -7,11 +7,14 @@
 </ion-header>
 
 <ion-content padding>
-  We'll be testing the log out button.
 
-  <button ion-button color="positive" block (click)="logMeOut()">
+  <!--<button ion-button color="positive" block (click)="logMeOut()">
     Log Me Out Please
+  </button>-->
+  <button ion-button (click)="goToProfile()">
+    <ion-icon name="person"></ion-icon>
   </button>
+
   <button ion-button color="positive" block (click)="showCharts()">
     Show Charts
   </button>
