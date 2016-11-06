@@ -1,18 +1,21 @@
 import { Component } from '@angular/core';
-import { NavController } from 'ionic-angular';
-//import { BloodtestDetailPage } from '../bloodtest-detail/bloodtest-detail';
+import { NavController, NavParams } from 'ionic-angular';
 import { BloodtestData } from '../../providers/bloodtest-data';
 
 @Component({
   selector: 'page-bloodtest-detail',
-  templateUrl: 'bloodtest-detail.html'
+  templateUrl: 'bloodtest-detail.html',
 })
+
 export class BloodtestDetailPage {
+  currentBloodtest: any;
+  constructor(public nav: NavController, public navParams: NavParams, 
+      public bloodtestData: BloodtestData) {
+    this.navParams = navParams;
 
-  constructor(public navCtrl: NavController) {}
-
-  ionViewDidLoad() {
-    console.log('Hello BloodtestDetail Page');
+    this.bloodtestData.getBloodtestDetail(this.navParams.get('eventId'))
+      .on('value', (snapshot) => {
+        this.currentBloodtest = snapshot.val();
+    });
   }
-
 }

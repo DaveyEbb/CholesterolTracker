@@ -18,8 +18,9 @@ export class BloodtestCreatePage {
   }
 
   createBloodtest(bloodtestDesc: string, hdl: number, ldl: number, 
-              trigl: number, totchol: number,testDate: string) {
-    this.bloodtestData.createBloodtest(bloodtestDesc, hdl, ldl, trigl, totchol, testDate).then( () =>
+              trigl: number, totchol: number, testDate: string) {
+    this.bloodtestData.createBloodtest(bloodtestDesc, hdl, ldl, trigl, 
+                                        totchol, testDate).then( () =>
     {
       this.nav.pop();
     });

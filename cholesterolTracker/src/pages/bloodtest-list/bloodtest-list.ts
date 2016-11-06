@@ -14,6 +14,22 @@ export class BloodtestListPage {
     this.nav = nav;
     this.bloodtestData = bloodtestData;
 
+    this.bloodtestData.getBloodtestList().on('value', snapshot => {
+      let rawList = [];
+      snapshot.forEach( snap => {
+        rawList.push({
+          id: snap.key,
+          bloodtestDesc: snap.val().bloodtestDesc,
+          testDate: snap.val().testDate,
+        });
+      });
+      this.bloodtestList = rawList;
+    });
   }
 
+  goToBloodtestDetail(bloodtestId){
+    this.nav.push(BloodtestDetailPage, {
+      bloodtestId: bloodtestId,
+    });
+  }
 }
