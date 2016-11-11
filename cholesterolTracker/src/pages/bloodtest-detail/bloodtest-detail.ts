@@ -13,7 +13,7 @@ export class BloodtestDetailPage {
       public bloodtestData: BloodtestData) {
     this.navParams = navParams;
 
-    this.bloodtestData.getBloodtestDetail(this.navParams.get('eventId'))
+    this.bloodtestData.getBloodtestDetail(this.navParams.get('bloodtestId'))
       .on('value', (snapshot) => {
         this.currentBloodtest = snapshot.val();
     });
